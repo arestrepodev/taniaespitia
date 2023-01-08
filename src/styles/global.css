@@ -7,4 +7,8 @@ h1,h2,h3,h4,h5,h6{
 body{
   font-family: 'Roboto', sans-serif;
   flex-direction: column;
+  overflow-x: scroll;
+  justify-content: flex-start;
+  padding: 4rem 0;
+  align-items: center;
 }
