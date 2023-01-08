@@ -1,0 +1,2 @@
+export const SITE_TITLE = "Tania Espitia - UI/UX Designer"
+export const SITE_DESCRIPTION = "Tania Espitia UI/UX Designer, creadora de experiencias y diseños aplicados a interfaces tanto para aplicaciones móviles como web"
