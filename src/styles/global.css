@@ -8,6 +8,18 @@
   --red: #A81111; 
 }
 
+[data-theme="light"]{
+  --color-bg: #FFFFFF;
+  --color-text: #011627;
+  --color-anchor: #2EC4B6;
+}
+
+[data-theme="dark"]{
+  --color-bg: #0F0F0F;
+  --color-text: #FFFFFF;
+  --color-anchor: #2EC4B6;
+}
+
 body{
   font-weight: normal;
   flex-direction: column;
