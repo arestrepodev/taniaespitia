@@ -1,10 +1,20 @@
 
+/* Global Variables */
+:root{
+  --white: #FFFFFF;
+  --orange: #FF9F1C;
+  --dark-blue: #011627;
+  --light-blue: #2EC4B6;
+  --red: #A81111; 
+}
+
 body{
-  font-family: 'Gilroy', sans-serif;
   font-weight: normal;
   flex-direction: column;
   overflow-x: scroll;
   justify-content: flex-start;
   padding: 4rem 0;
   align-items: center;
+  background-color: var(--white);
+  color: (var(--dark-blue));
 }

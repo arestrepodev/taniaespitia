@@ -24,12 +24,13 @@ console.log('This runs in your terminal, not the browser!');
 </html>
 <style>
   h1 {
-    color: #002C44;
+    color: var(--light-blue);
     margin: 0;
     margin-bottom: 1rem;
   }
   blockquote{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
   }
   small{
     font-size: 1.2rem;
@@ -38,15 +39,15 @@ console.log('This runs in your terminal, not the browser!');
     margin: 10px 0;
     display: block;
     font-size: .9rem;
-    color: #75A8B1;
+    color: var(--dark-blue);
   }
 
   a{
-    color: #75A8B1;
+    color: var(--orange);;
   }
 
   a:hover{
-    color: #96C7CC;
+    color: var(--light-blue);;
   }
 
   @media screen and (max-width: 768px){
