@@ -1,0 +1,58 @@
+---
+import "../styles/global.css";
+import BaseHead from '../components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../config';
+
+// Welcome to Astro! Everything between these triple-dash code fences
+// is your "component front matter". It never runs in the browser.
+console.log('This runs in your terminal, not the browser!');
+---
+<!-- Below is your "component template." It's just HTML, but with
+     some magic sprinkled in to help you build great templates. -->
+<html lang="es">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
+  </head>
+  <body>
+    <h1>Work</h1>
+  </body>
+</html>
+<style>
+  h1 {
+    color: var(--light-blue);
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+  blockquote{
+    font-size: 1.5rem;
+  }
+  small{
+    font-size: 1.2rem;
+  }
+  span{
+    margin: 10px 0;
+    display: block;
+    font-size: .9rem;
+    color: var();
+  }
+
+  a{
+    color: var(--light-blue);
+  }
+
+  a:hover{
+    color: #96C7CC;
+  }
+
+  @media screen and (max-width: 768px){
+    h1{
+      font-size: 1.6rem;
+    }
+    blockquote{
+    font-size: 1.3rem;
+    }
+    small{
+      font-size: 1rem;
+    }
+  }
+</style>
