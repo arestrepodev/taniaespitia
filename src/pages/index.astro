@@ -3,13 +3,7 @@ import Whale from '../components/Whale.astro';
 import "../styles/global.css";
 import BaseHead from '../components/BaseHead.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../config';
-
-// Welcome to Astro! Everything between these triple-dash code fences
-// is your "component front matter". It never runs in the browser.
-console.log('This runs in your terminal, not the browser!');
 ---
-<!-- Below is your "component template." It's just HTML, but with
-     some magic sprinkled in to help you build great templates. -->
 <html lang="es">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION}/>
@@ -23,6 +17,18 @@ console.log('This runs in your terminal, not the browser!');
   </body>
 </html>
 <style>
+
+  body{
+    padding: 4rem 0;
+    font-weight: normal;
+    flex-direction: column;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--white);
+    color: (var(--dark-blue));
+}
+
   h1 {
     color: var(--light-blue);
     margin: 0;

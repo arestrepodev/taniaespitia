@@ -1,0 +1,75 @@
+---
+  import "../styles/header.css";
+  const pathname = new URL(Astro.request.url).pathname;
+  const currentPath = pathname.slice(1);
+---
+<header class="header">
+  <a href="/" class="logo">
+    <img class="logo__image" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
+  </a>
+  <!-- Desktop Menu -->
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a class="menu__link" href="/work">Work</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="/about">About</a>
+      </li>
+      <li class="menu__item">
+        <a class="menu__link" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+  <ul class="languages">
+    <a class="languages__button" href="#">ES</a>
+    <a class="languages__button" href="#">EN</a>
+  </ul>
+  <button type="button" class="burguer" id="js-burguer-menu">
+    <img class="burger__avatar" src="/assets/images/burguer-open.svg" alt="Burger Icon" id="js-burguer-image">
+    <span class="burger__icon"></span>
+  </button>
+</header>
+<nav class="mobileMenu" id="js-mobile-menu">
+  <ul class="mobileMenu__list">
+    <li class="mobileMenu__item">
+      <a class={`mobileMenu__link ${currentPath === "work" && "active"}`} href="/work">Work</a>
+    </li>
+    <li class="mobileMenu__item">
+      <a class={`mobileMenu__link ${currentPath === "about" && "active"}`} href="/about">About</a>
+    </li>
+    <li class="mobileMenu__item">
+      <a class={`mobileMenu__link ${currentPath === "contact" && "active"}`} href="/contact">Contact</a>
+    </li>
+  </ul>
+  <div class="mobileLanguages">
+    <a class="mobileLanguages__link" href="#">ES</a>
+    <a class="mobileLanguages__link" href="#">EN</a>
+  </div>
+  <div class="social">
+    <a href="#" class="social__link">Behance</a>
+    <a href="#" class="social__link">Linkedin</a>
+  </div>
+</nav>
+<script>
+  let toggle = false;
+  const $burgerButton = document.getElementById("js-burguer-menu");
+  const $burguerImage = document.getElementById("js-burguer-image") as HTMLImageElement;
+  const $mobileMenu   = document.getElementById("js-mobile-menu");
+  const burguerOpenFile = `/assets/images/burguer-open.svg`;
+  const burguerCloseFile = `/assets/images/burguer-close.svg`;
+  
+  const toggleMenu = () => {
+    $mobileMenu.classList.toggle("open");
+    toggle = !toggle; 
+    if(toggle){
+      $burguerImage.src = `${burguerCloseFile}`;
+    } else {
+      $burguerImage.src = `${burguerOpenFile}`;
+    }
+    console.log("Toggle Menu");
+  }
+
+  $burgerButton.addEventListener("click", toggleMenu);
+  
+</script>

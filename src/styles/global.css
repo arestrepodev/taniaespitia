@@ -5,6 +5,8 @@
   --orange: #FF9F1C;
   --dark-blue: #011627;
   --light-blue: #2EC4B6;
+  --gray: rgba(1, 22, 9, .2);
+  --gray-text: rgba(255, 255, 255, .6);
   --red: #A81111; 
 }
 
@@ -20,13 +22,11 @@
   --color-anchor: #2EC4B6;
 }
 
-body{
-  font-weight: normal;
-  flex-direction: column;
-  overflow-x: scroll;
-  justify-content: flex-start;
-  padding: 4rem 0;
-  align-items: center;
-  background-color: var(--white);
-  color: (var(--dark-blue));
+*{
+  box-sizing: border-box;
+}
+
+.body{
+  padding: 0;
+  margin: 0;
 }
