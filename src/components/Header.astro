@@ -11,35 +11,35 @@
   <nav class="menu">
     <ul class="menu__list">
       <li class="menu__item">
-        <a class="menu__link" href="/work">Work</a>
+        <a class={`menu__link ${currentPath === "work" ? "active" : null}`} href="/work">Work</a>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="/about">About</a>
+        <a class={`menu__link ${currentPath === "about" ? "active" : null}`} href="/about">About</a>
       </li>
       <li class="menu__item">
-        <a class="menu__link" href="/contact">Contact</a>
+        <a class={`menu__link ${currentPath === "contact" ? "active" : null}`} href="/contact">Contact</a>
       </li>
     </ul>
   </nav>
-  <ul class="languages">
-    <a class="languages__button" href="#">ES</a>
-    <a class="languages__button" href="#">EN</a>
-  </ul>
-  <button type="button" class="burguer" id="js-burguer-menu">
-    <img class="burger__avatar" src="/assets/images/burguer-open.svg" alt="Burger Icon" id="js-burguer-image">
+  <div class="languages">
+    <a class="languages__link" href="#">ES</a>
+    <a class="languages__link" href="#">EN</a>
+  </div>
+  <button type="button" class="burger" id="js-burger-menu">
+    <img class="burger__avatar" src="/assets/images/burger-open.svg" alt="Burger Icon" id="js-burger-image">
     <span class="burger__icon"></span>
   </button>
 </header>
 <nav class="mobileMenu" id="js-mobile-menu">
   <ul class="mobileMenu__list">
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "work" && "active"}`} href="/work">Work</a>
+      <a class={`mobileMenu__link ${currentPath === "work" ? "active" : null}`} href="/work">Work</a>
     </li>
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "about" && "active"}`} href="/about">About</a>
+      <a class={`mobileMenu__link ${currentPath === "about" ? "active" : null}`} href="/about">About</a>
     </li>
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "contact" && "active"}`} href="/contact">Contact</a>
+      <a class={`mobileMenu__link ${currentPath === "contact" ? "active" : null}`} href="/contact">Contact</a>
     </li>
   </ul>
   <div class="mobileLanguages">
@@ -53,19 +53,19 @@
 </nav>
 <script>
   let toggle = false;
-  const $burgerButton = document.getElementById("js-burguer-menu");
-  const $burguerImage = document.getElementById("js-burguer-image") as HTMLImageElement;
+  const $burgerButton = document.getElementById("js-burger-menu");
+  const $burgerImage = document.getElementById("js-burger-image") as HTMLImageElement;
   const $mobileMenu   = document.getElementById("js-mobile-menu");
-  const burguerOpenFile = `/assets/images/burguer-open.svg`;
-  const burguerCloseFile = `/assets/images/burguer-close.svg`;
+  const burgerOpenFile = `/assets/images/burger-open.svg`;
+  const burgerCloseFile = `/assets/images/burger-close.svg`;
   
   const toggleMenu = () => {
     $mobileMenu.classList.toggle("open");
     toggle = !toggle; 
     if(toggle){
-      $burguerImage.src = `${burguerCloseFile}`;
+      $burgerImage.src = `${burgerCloseFile}`;
     } else {
-      $burguerImage.src = `${burguerOpenFile}`;
+      $burgerImage.src = `${burgerOpenFile}`;
     }
     console.log("Toggle Menu");
   }
