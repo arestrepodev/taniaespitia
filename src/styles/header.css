@@ -17,10 +17,6 @@
   align-items: center;
 }
 
-.logo__image {
-
-}
-
 .menu{
   grid-column: 2;
   place-self: center;
