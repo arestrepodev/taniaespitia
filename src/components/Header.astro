@@ -3,33 +3,35 @@
   const pathname = new URL(Astro.request.url).pathname;
   const currentPath = pathname.slice(1);
 ---
-<header class="header">
-  <a href="/" class="logo">
-    <img class="logo__image" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
-  </a>
-  <!-- Desktop Menu -->
-  <nav class="menu">
-    <ul class="menu__list">
-      <li class="menu__item">
-        <a class={`menu__link ${currentPath === "work" ? "active" : null}`} href="/work">Work</a>
-      </li>
-      <li class="menu__item">
-        <a class={`menu__link ${currentPath === "about" ? "active" : null}`} href="/about">About</a>
-      </li>
-      <li class="menu__item">
-        <a class={`menu__link ${currentPath === "contact" ? "active" : null}`} href="/contact">Contact</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="languages">
-    <a class="languages__link" href="#">ES</a>
-    <a class="languages__link" href="#">EN</a>
-  </div>
-  <button type="button" class="burger" id="js-burger-menu">
-    <img class="burger__avatar" src="/assets/images/burger-open.svg" alt="Burger Icon" id="js-burger-image">
-    <span class="burger__icon"></span>
-  </button>
-</header>
+<div class="wrapper__header">
+  <header class="header">
+    <a href="/" class="logo">
+      <img class="logo__image" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
+    </a>
+    <!-- Desktop Menu -->
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class={`menu__link ${currentPath === "work" ? "active" : null}`} href="/work">Work</a>
+        </li>
+        <li class="menu__item">
+          <a class={`menu__link ${currentPath === "about" ? "active" : null}`} href="/about">About</a>
+        </li>
+        <li class="menu__item">
+          <a class={`menu__link ${currentPath === "contact" ? "active" : null}`} href="/contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="languages">
+      <a class="languages__link" href="#">ES</a>
+      <a class="languages__link" href="#">EN</a>
+    </div>
+    <button type="button" class="burger" id="js-burger-menu">
+      <img class="burger__avatar" src="/assets/images/burger-open.svg" alt="Burger Icon" id="js-burger-image">
+      <span class="burger__icon"></span>
+    </button>
+  </header>
+</div>
 <nav class="mobileMenu" id="js-mobile-menu">
   <ul class="mobileMenu__list">
     <li class="mobileMenu__item">

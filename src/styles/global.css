@@ -8,6 +8,7 @@
   --gray: rgba(1, 22, 9, .2);
   --gray-text: rgba(255, 255, 255, .6);
   --red: #A81111; 
+  --max-width: 1440px;
 }
 
 [data-theme="light"]{
