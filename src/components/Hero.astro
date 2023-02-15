@@ -1,5 +1,6 @@
 ---
 import "../styles/hero-landing.css"
+import Button from './Button.astro';
 ---
 <section class="wrapper__hero">
   <article class="hero">
@@ -7,9 +8,7 @@ import "../styles/hero-landing.css"
       <h1 class="hero__title large-black-title">
         ¡Hola! Soy Tania Espitia, <br/> Diseñadora UX/UI
       </h1>
-      <a href="#" class="hero__link">
-        Ver más
-      </a>
+      <Button children="Ver Más" variation="primary" type="link" link="/about"/>
     </div>
     <div class="hero__footer">
       <button type="button" class="hero__button" id="js-scroll-down">
