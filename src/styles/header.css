@@ -92,6 +92,7 @@
   height: calc(100vh - 82px);
   position: absolute;
   background: var(--dark-blue);
+  z-index: 2;
 }
 
 .mobileMenu.open {
