@@ -1,5 +1,6 @@
 .wrapper__header{
   background-color: var(--white);
+  border-bottom: 1px solid var(--gray);
 }
 
 .header {
@@ -11,7 +12,6 @@
   padding: 0 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-bottom: 1px solid var(--gray);
 }
 
 .logo {
