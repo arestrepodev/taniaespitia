@@ -90,5 +90,6 @@
       0% 110%,
       100% -10%;
     background-size: auto, auto, 35%, 35%;
+    height: calc(100vh - 180px);
   }
 }
