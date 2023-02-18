@@ -39,7 +39,7 @@
 }
 
 .menu__link{
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--dark-blue);
   transition: all ease-in 100ms;
@@ -60,7 +60,7 @@
 }
 
 .languages__link{
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: var(--dark-blue);
   font-weight: 600;
   text-decoration: none;
