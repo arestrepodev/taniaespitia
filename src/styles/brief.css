@@ -32,17 +32,24 @@
     grid-template-columns: 1.5fr 1.2fr;
   }
   .brief__picture{
-    width: 100%;
+    width: 300px;
   }
 }
 
 
 @media screen and (max-width: 767px) {
   .brief{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .brief__picture{
-    width: 300px;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .brief__picture{
+    width: 100%;
   }
 }

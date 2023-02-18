@@ -82,7 +82,15 @@
     display: flex;
     flex-direction: column;
   }
+
   .copyright{
     text-align: left;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .explore__list{
+    flex-direction: column;
+    gap: 10px;
   }
 }

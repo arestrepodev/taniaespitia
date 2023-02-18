@@ -2,7 +2,7 @@
   background-color: var(--white);
   background-image: url("/assets/images/right-lines-blue.svg");
   background-repeat: no-repeat;
-  background-position: 110% 15%;
+  background-position: 120% 16%;
 }
 
 .feature {
@@ -40,7 +40,7 @@
 
 .card__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
@@ -62,7 +62,12 @@
 .card:hover{
   background-color: var(--dark-blue);
   color: white;
+  /* background-image: url("/assets/images/bubble-right-blue.svg");
+  background-repeat: no-repeat;
+  background-position: 141% 305%;
+  background-size: 60%; */
 }
+
 
 .card__title {
   margin: 1rem 0 0 0;
@@ -74,13 +79,17 @@
 
 .card__title::after{
   content: "";
+  background-color: var(--orange);
   width: 110px;
   height: 6px;
-  background-color: var(--orange);
   left: 0;
   position: relative;
   display: block;
   top: -48px;
+}
+
+.card:hover .card__title::after{
+  background-color: var(--red);
 }
 
 .card__list {
@@ -119,8 +128,15 @@
   align-self: end;
 }
 
+.card__arrow{
+  transition: all ease-out 300ms;
+}
+
+.card:hover .card__arrow{
+filter: brightness(100);
+}
+
 @media screen and (max-width: 768px) {
-  
   .feature__wrapper {
     background-image: none;
   }
@@ -128,5 +144,20 @@
   .feature {
     display: flex;
     flex-direction: column;
+  }
+
+  .card__container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 310px) {
+  .card{
+    padding: 1rem;
+  }
+
+  .card__title::after{
+    background-color: transparent;
   }
 }
