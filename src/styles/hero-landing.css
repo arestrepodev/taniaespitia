@@ -11,7 +11,6 @@
     100% -10%;
   background-repeat: no-repeat, no-repeat;
   background-size: auto;
-  height: 100%;
   height: calc(100vh - 83px);
 }
 
@@ -65,21 +64,6 @@
   cursor: pointer;
   position: relative;
   animation: scroll-down 2s ease-in-out infinite;
-}
-
-@keyframes scroll-down{
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(20px); 
-  }
-  
-  100%{
-    transform: translateY(0); 
-  }
-
 }
 
 @media screen and (max-width: 768px) {
