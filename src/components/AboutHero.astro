@@ -22,3 +22,13 @@ import "../styles/about-hero.css"
     </div>
   </article>
 </section>
+<script>
+  const $scrollButton = document.querySelector("#js-scroll-down");
+
+  const scrollDown = () => window.scrollBy({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+
+  $scrollButton.addEventListener("click", scrollDown);
+</script>
