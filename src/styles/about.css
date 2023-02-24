@@ -58,7 +58,7 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 468px) {
   .skills__container{
     display: flex;
     flex-direction: column;
@@ -66,7 +66,7 @@
 
   .skills__picture,
   .skills__picture img{
-    width: 70%;
+    width: 100%;
     height: auto;
   }
 }
