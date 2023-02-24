@@ -60,7 +60,8 @@
 
 @media screen and (max-width: 390px) {
   .skills__container{
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
   }
 
   .skills__picture,
