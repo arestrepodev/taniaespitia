@@ -11,6 +11,8 @@
 .experience__item{
   display: grid;
   grid-template-columns: 1fr 3fr;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--dark-blue);
 }
 
 .experience__subtitle{
@@ -27,6 +29,7 @@ details > summary::-webkit-details-marker {
 .details{
   position: relative;
 }
+
 
 .details:hover{
   cursor: pointer;

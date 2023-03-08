@@ -25,6 +25,10 @@
   --color-anchor: #2EC4B6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *{
   box-sizing: border-box;
 }

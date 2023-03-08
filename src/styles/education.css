@@ -1,0 +1,14 @@
+.education__wrapper{
+   background-color: var(--white);
+}
+
+.education{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.education__grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+}
