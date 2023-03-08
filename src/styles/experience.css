@@ -1,0 +1,94 @@
+.experience__wrapper{
+  background-color: var(--white);
+}
+
+.experience{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.experience__item{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.experience__subtitle{
+  margin: 1rem 0;
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.details{
+  position: relative;
+}
+
+.details:hover{
+  cursor: pointer;
+}
+
+.summary__title{
+  margin: 0;
+}
+
+.summary__subtitle{
+  margin: 0;
+}
+
+.chevron-up,
+.chevron-down{
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  pointer-events: none;
+}
+
+details summary .chevron-down,
+details summary .chevron-up{
+  display: block;
+}
+
+
+details[open] .chevron-up {
+  opacity: 0;
+}
+
+details summary {
+  list-style: none;
+  padding: 1em;
+}
+details summary:focus {
+  outline: none;
+}
+
+.summary__content{
+  display: flex;
+  margin: 0 1rem;
+}
+
+.summary__detail__title{
+  margin: 1rem 0;
+}
+
+.summary__list{
+  padding: 0 1.2rem;
+  list-style-position: outside;
+}
+
+.summary__list__text{
+  display: flex;
+  gap: 0 1rem;
+}
+
+.responsibilities--list{
+  list-style-image: url("/assets/images/rectangle-list.svg");
+}
+
+.achievements--list{
+  list-style-image: url("/assets/images/start-list.svg");
+}
