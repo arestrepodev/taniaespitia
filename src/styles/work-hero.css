@@ -1,0 +1,16 @@
+.workHero__wrapper{
+  background-image: url("/assets/images/logo-landing.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  height: calc(100vh - 83px);
+}
+
+.workHero{
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative;
+  align-items: center;
+}
