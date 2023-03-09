@@ -11,6 +11,7 @@
   --red: #A81111; 
   --max-width: 1440px;
   --shadow: -2px 6px 20px 0px rgba(0,0,0,0.2);
+  --transition: all ease-out 300ms;
 }
 
 [data-theme="light"]{
