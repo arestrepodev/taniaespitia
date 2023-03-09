@@ -63,7 +63,7 @@ details[open] .chevron-up {
 
 details summary {
   list-style: none;
-  padding: 1em;
+  padding: 1rem;
 }
 details summary:focus {
   outline: none;
@@ -94,4 +94,19 @@ details summary:focus {
 
 .achievements--list{
   list-style-image: url("/assets/images/start-list.svg");
+}
+
+@media screen and (max-width: 768px) {
+  .experience__item{
+    grid-template-columns: 1fr;
+  }
+
+  details summary{
+    padding: 0;
+  }
+
+  .summary__content{
+    margin: 1rem 0;
+    display: block;
+  }
 }
