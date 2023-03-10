@@ -12,5 +12,32 @@
   margin: 0 auto;
   padding: 3rem;
   position: relative;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.workHero__title{
+  grid-area:  1  / span 2;
+  place-self: end;
+  margin: 0;
+}
+
+.workHero__description{
+  grid-area: 2  /  span 2;
+}
+
+@media screen and (max-width: 768px) {
+  .workHero__wrapper{
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: 100% 1rem;
+    height: auto;
+  }
+
+  .workHero{
+    display: block;
+    height: auto;
+    padding: 2rem;
+  }
 }
