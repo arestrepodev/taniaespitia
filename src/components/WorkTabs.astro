@@ -1,0 +1,46 @@
+---
+  import "../styles/tabs.css";
+---
+<section class="tabs" id="tabs">
+  <ul class="tabs--nav" id="tabs-nav">
+    <li class="tabs--item active">
+      <a class="tabs--link" href="#tab1">Todos</a>
+    </li>
+    <li class="tabs--item">
+      <a class="tabs--link" href="#tab2">Casos de Estudio</a>
+    </li>
+    <li class="tabs--item">
+      <a class="tabs--link" href="#tab3">Colaboraciones</a>
+    </li>
+  </ul>
+  <div class="tabs--content active" id="tab1">
+    Contenido 1
+  </div>
+  <div class="tabs--content" id="tab2">
+    Contenido 2
+  </div>
+  <div class="tabs--content" id="tab3">
+    Contenido 3
+  </div>
+</section>
+<script>
+  const $tabsNav = document.querySelector("#tabs-nav");
+  const $tabsContent = document.querySelectorAll(".tabs--content");
+
+  $tabsNav.addEventListener("click", (e: Event) => {
+    e.preventDefault();
+    const target = e.target as HTMLLinkElement;
+    const tagName = target.tagName;
+    if(tagName){
+      const tabID = target.getAttribute("href");
+      const tab = document.querySelector(tabID);
+      if(tab){
+        $tabsContent.forEach(content => content.classList.remove("active"));
+        $tabsNav.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+        tab.classList.add("active");
+        target.parentElement.classList.add("active");
+      }
+    }
+  }) 
+  
+</script>
