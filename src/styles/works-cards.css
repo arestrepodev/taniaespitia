@@ -1,0 +1,21 @@
+.workGrid{
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 4rem;
+}
+
+.workGrid__item{
+  box-shadow: var(--shadow);
+  padding: 2rem;
+}
+
+.workGrid__header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.workGrid__description{
+  margin-bottom: 2rem;
+}

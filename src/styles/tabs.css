@@ -1,4 +1,10 @@
+.tabs__wrapper{
+  background-color: var(--white);
+}
+
 .tabs{
+  max-width: var(--max-width);
+  margin: 0 auto;
   padding: 1rem 2rem;
 }
 
@@ -34,7 +40,7 @@
 }
 
 .tabs--content{
-  padding: 1rem;
+  padding: 1rem 0;
   display: none;
 }
 
