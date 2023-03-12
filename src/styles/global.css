@@ -80,3 +80,8 @@ html {
 .link-icon:hover{
   color: var(--light-blue);
 }
+
+.icon-image{
+  max-width: 100%;
+  height: auto;
+}
