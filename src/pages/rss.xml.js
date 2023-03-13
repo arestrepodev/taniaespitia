@@ -10,9 +10,7 @@ export async function get(context) {
     description: SITE_DESCRIPTION,
     site: context.site,
     items: work.map((item) => ({
-      title: item.data.title,
-      description: item.data.description,
-      pubDate: item.data.pubDate,
+      ...item.data,
       link: `/work/${item.slug}`
     }))
   })

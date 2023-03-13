@@ -2,11 +2,16 @@
 import "@styles/global.css";
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
-import Hero from '@components/Hero.astro';
 import Footer from '@components/Footer.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '@root/config';
-import Brief from '@components/Brief.astro';
-import BriefWorks from '@components/BriefWorks.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from "@root/config";
+import WorkHero from '@components/WorkHero.astro';
+import WorkTabs from '@components/WorkTabs.astro';
+
+import { getCollection } from 'astro:content';
+
+const workEntries = await getCollection("work");
+console.log(workEntries);
+
 ---
 <html lang="es">
   <head>
@@ -14,14 +19,14 @@ import BriefWorks from '@components/BriefWorks.astro';
   </head>
   <body>
     <Header />
-    <Hero />
-    <Brief />
-    <BriefWorks />
+    <WorkHero/>
+    <WorkTabs />
     <Footer />
   </body>
 </html>
 <style>
   body{
     margin: 0;
+    padding: 0;
   }
 </style>
