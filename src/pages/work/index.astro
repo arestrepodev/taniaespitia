@@ -7,11 +7,6 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "@root/config";
 import WorkHero from '@components/WorkHero.astro';
 import WorkTabs from '@components/WorkTabs.astro';
 
-import { getCollection } from 'astro:content';
-
-const workEntries = await getCollection("work");
-console.log(workEntries);
-
 ---
 <html lang="es">
   <head>

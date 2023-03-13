@@ -1,34 +1,29 @@
 ---
   import "../../styles/works-cards.css"
   import AllBadge from '../icons/AllBadge.astro';
+
+  import { getCollection } from 'astro:content';
+
+  const AllWork = await getCollection("work");
+
 ---
 <article class="workGrid">
-  <div class="workGrid__item">
-    <div class="workGrid__header">
-      <img src="/assets/images/ruteando-works.svg" alt="Ruteando" class="workGrid__image">
-      <img src="/assets/images/ruteando-logo-works.jpg" alt="Ruteando Logo" class="workGrid__logo">
-    </div>
-    <p class="workGrid__description">
-      Lorem ipsum dolor sit amet consectetur. In id potenti ut facilisi. Facilisis orci mauris molestie felis enim id auctor mauris. Dignissim posuere aliquet lorem cras.
-    </p>
-    <AllBadge/>
-    <a href="#" class="link-icon justify-content-end">
-      <span>Ver Más</span>
-      <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">
-    </a>
-  </div>
-  <div class="workGrid__item">
-    <div class="workGrid__header">
-      <img src="/assets/images/ruteando-works.svg" alt="Ruteando" class="workGrid__image">
-      <img src="/assets/images/ruteando-logo-works.jpg" alt="Ruteando Logo" class="workGrid__logo">
-    </div>
-    <p class="workGrid__description">
-      Lorem ipsum dolor sit amet consectetur. In id potenti ut facilisi. Facilisis orci mauris molestie felis enim id auctor mauris. Dignissim posuere aliquet lorem cras.
-    </p>
-    <AllBadge/>
-    <a href="#" class="link-icon justify-content-end">
-      <span>Ver Más</span>
-      <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">
-    </a>
-  </div>
+  {
+    AllWork.map(work => (
+      <div class="workGrid__item">
+        <div class="workGrid__header">
+          <img src={work.data.thumbImage} alt={`${work.data.title}-image`} class="workGrid__image">
+          <img src={work.data.thumbLogo} alt={`${work.data.title}-logo`} class="workGrid__logo">
+        </div>
+        <p class="workGrid__description">
+          {work.data.thumbDescription}
+        </p>
+        <AllBadge/>
+        <a href={`/work/${work.slug}`} class="link-icon justify-content-end">
+          <span>Ver Más</span>
+          <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">
+        </a>
+      </div>
+    ))
+  }
 </article>
