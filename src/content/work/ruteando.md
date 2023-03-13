@@ -9,7 +9,7 @@
   thumbImage: "/assets/work/ruteando-works.svg"
   thumbLogo: "/assets/work/ruteando-logo-works.jpg"
   thumbDescription: "Lorem ipsum dolor sit amet consectetur. In id potenti ut facilisi. Facilisis orci mauris molestie felis enim id auctor mauris. Dignissim posuere aliquet lorem cras."
-  thumbBadge: "/assets/work/all-badge.svg"
+  thumbBadge: "/assets/work/study-cases-badge.svg"
 ---
 ### Ruteando
 

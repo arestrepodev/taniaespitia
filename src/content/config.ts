@@ -17,7 +17,7 @@ const work = defineCollection({
 		heroImage: z.string().optional(),
 		category: z.string(),
 		thumbImage: z.string(),
-		thumbLogo: z.string(),
+		thumbLogo: z.string().optional(),
 		thumbDescription: z.string(),
 		thumbBadge: z.string(),
 	}),

@@ -15,7 +15,10 @@
       <div class="workGrid__item">
         <div class="workGrid__header">
           <img src={work.data.thumbImage} alt={`${work.data.title}-image`} class="workGrid__image">
-          <img src={work.data.thumbLogo} alt={`${work.data.title}-logo`} class="workGrid__logo">
+          {
+            work?.data?.thumbLogo &&
+            <img src={work.data.thumbLogo} alt={`${work.data.title}-logo`} class="workGrid__logo">
+          }
         </div>
         <p class="workGrid__description">
           {work.data.thumbDescription}
