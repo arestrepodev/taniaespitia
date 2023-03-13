@@ -1,6 +1,8 @@
 ---
-  import "../styles/tabs.css";
-  import All from './works/All.astro';
+  import "@styles/tabs.css";
+  import All from '@components/works/All.astro';
+  import Collaborations from '@components/works/Collaborations.astro';
+  import StudyCases from '@components/works/StudyCases.astro';
 ---
 <div class="tabs__wrapper">
   <section class="tabs" id="tabs">
@@ -19,10 +21,10 @@
       <All/>
     </div>
     <div class="tabs--content" id="tab2">
-      Contenido 2
+      <Collaborations/>
     </div>
     <div class="tabs--content" id="tab3">
-      Contenido 3
+      <StudyCases />
     </div>
   </section>
 </div>

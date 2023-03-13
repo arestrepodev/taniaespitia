@@ -1,0 +1,31 @@
+---
+  import "@styles/works-cards.css"
+  import AllBadge from '../icons/AllBadge.astro';
+
+  import { getCollection } from 'astro:content';
+
+  const StudyCasesWork = await getCollection("work", ({ data }) => {
+    return data.category === "STUDY-CASES"
+  });
+
+---
+<article class="workGrid">
+  {
+    StudyCasesWork.map(work => (
+      <div class="workGrid__item">
+        <div class="workGrid__header">
+          <img src={work.data.thumbImage} alt={`${work.data.title}-image`} class="workGrid__image">
+          <img src={work.data.thumbLogo} alt={`${work.data.title}-logo`} class="workGrid__logo">
+        </div>
+        <p class="workGrid__description">
+          {work.data.thumbDescription}
+        </p>
+        <AllBadge/>
+        <a href={`/work/${work.slug}`} class="link-icon justify-content-end">
+          <span>Ver Más</span>
+          <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">
+        </a>
+      </div>
+    ))
+  }
+</article>
