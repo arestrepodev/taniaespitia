@@ -21,7 +21,7 @@
         <p class="workGrid__description">
           {work.data.thumbDescription}
         </p>
-        <AllBadge/>
+        <img src={work.data.thumbBadge} alt={`${work.data.title}-badge`} class="wordGrid__badge d-block mb-2 icon-image">
         <a href={`/work/${work.slug}`} class="link-icon justify-content-end">
           <span>Ver Más</span>
           <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">

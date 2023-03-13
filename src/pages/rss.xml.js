@@ -1,4 +1,4 @@
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@root/config";
 
 import { getCollection } from "astro:content";
 import rss from '@astrojs/rss';
