@@ -1,6 +1,9 @@
 ---
   import "../styles/tabs.css";
   import All from './works/All.astro';
+
+  const works = (await Astro.glob('../pages/work/*.{md,mdx}'));
+  console.log(works)
 ---
 <div class="tabs__wrapper">
   <section class="tabs" id="tabs">
