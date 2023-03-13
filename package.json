@@ -5,8 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
+    "start": "astro check --watch & astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
