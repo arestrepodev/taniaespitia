@@ -62,10 +62,6 @@
 .card:hover{
   background-color: var(--dark-blue);
   color: white;
-  /* background-image: url("/assets/images/bubble-right-blue.svg");
-  background-repeat: no-repeat;
-  background-position: 141% 305%;
-  background-size: 60%; */
 }
 
 
