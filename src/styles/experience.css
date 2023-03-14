@@ -83,6 +83,10 @@ details summary:focus {
   list-style-position: outside;
 }
 
+.summary__list__item{
+  margin-bottom: 1rem;
+}
+
 .summary__list__text{
   display: flex;
   gap: 0 1rem;
