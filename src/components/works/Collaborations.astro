@@ -1,12 +1,12 @@
 ---
   import "@styles/works-cards.css"
-  import AllBadge from '../icons/AllBadge.astro';
 
   import { getCollection } from 'astro:content';
   
   const CollaborationsWork = await getCollection("work", ({data}) => {
     return data.category === "COLLABORATIONS"
   });
+  
   
 
 ---

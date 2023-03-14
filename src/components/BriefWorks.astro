@@ -1,5 +1,14 @@
 ---
   import "@styles/brief-works.css";
+  import { getCollection } from 'astro:content';
+
+  const CollaborationsWork = await getCollection("work", ({data}) => {
+    return data.category === "COLLABORATIONS"
+  });
+
+  const StudyCasesWork = await getCollection("work", ({ data }) => {
+    return data.category === "STUDY-CASES"
+  });
 ---
 <div class="feature__wrapper">
   <section class="feature">
@@ -13,57 +22,33 @@
         <h3 class="card__title">Colaboraciones</h3>
         <p class="card__description">He trabajado con marcas como:</p>
         <ul class="card__list">
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              <span>BBC cervecería</span>  
-            </a>
-          </li>
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              <span>Michelob (Runnder)</span> 
-            </a>
-          </li>
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              <span class="card__link__text">Universidad de los Andes (Fauny)</span>
-            </a>
-          </li>
+          {
+            CollaborationsWork.map((work) => (
+              <li class="card__item">
+                <a href={`/work/${work.slug}`} class="card__link">
+                  <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow"/>
+                  <span class="card__link__text">{work.data.titleLink}</span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
-        <a href="#" class="card__showmore">
-          <span>Ver Más</span>
-          <img class="card__arrow" src="/assets/images/arrow-right.svg" alt="Arrow right">
-        </a>
       </div>
       <div class="card">
-        <h3 class="card__title">Casos de estudio</h3>
-        <p class="card__description">Por medio de propuestas creativas he brindado soluciones a problemáticas del entorno</p>
-         <ul class="card__list">
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              BBC cervecería
-            </a>
-          </li>
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              Michelob (Runnder)
-            </a>
-          </li>
-          <li class="card__item">
-            <a href="#" class="card__link">
-              <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow">
-              Universidad de los Andes (Fauny)
-            </a>
-          </li>
+        <h3 class="card__title">Casos de Estudio</h3>
+        <p class="card__description">Por medio de propuestas creativas he brindado soluciones a problemáticas del entorno:</p>
+        <ul class="card__list">
+          {
+            StudyCasesWork.map((work) => (
+              <li class="card__item">
+                <a href={`/work/${work.slug}`} class="card__link">
+                  <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow"/>
+                  <span class="card__link__text">{work.data.titleLink}</span>
+                </a>
+              </li>
+            ))
+          }
         </ul>
-        <a href="#" class="card__showmore">
-          <span>Ver Más</span>
-          <img class="card__arrow"  src="/assets/images/arrow-right.svg" alt="Arrow right">
-        </a>
       </div>
     </article>
   </section>
