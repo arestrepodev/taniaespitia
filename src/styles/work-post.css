@@ -1,0 +1,13 @@
+.workPost__wrapper{
+
+}
+
+.workPost__main{
+}
+
+.workPost__hero{
+  width: 100%;
+  height: auto;
+  display: block;
+  overflow: hidden;
+}

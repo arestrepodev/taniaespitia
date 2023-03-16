@@ -85,3 +85,19 @@ html {
   max-width: 100%;
   height: auto;
 }
+
+.image{
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.image.fill{
+  object-fit: fill;
+}
+.image.cover{
+  object-fit: cover;
+}
+.image.contain{
+  object-fit: contain;
+}
