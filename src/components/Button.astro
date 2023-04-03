@@ -1,5 +1,4 @@
 ---
- import "@styles/button.css";
  const { type, children, link, variation } = Astro.props;
 ---
 {type === "button" && <button class={`button button--${variation}`}>{children}</button>}

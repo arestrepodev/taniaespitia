@@ -1,3 +1,13 @@
+h1:first-of-type{
+	display: none;
+}
+
+.workPost__picture,
+.workPost__picture img{
+  width: 100%;
+  height: auto;
+}
+
 .workPost__hero{
   width: 100%;
   height: auto;
@@ -33,17 +43,72 @@
   margin-top: .5rem;
 }
 
-.workDetail__description{
+.workDetail__item:first-child{
   width: 90%;
 }
 
-h1:first-of-type{
-	display: none;
+/* Work Post Case */
+.workCase{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.workCase__list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Research Post Case */
+.workResearch,
+.workSystem{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+
+/* Work Post Share */
+.workShare__description{
+  width: 50%;
 }
 
 
 @media screen and (max-width: 768px) {
-  .workDetail{
+  .workPost__section{
+    padding: 2rem;
+  }
+
+  .workDetail .workPost__picture,
+  .workDetail .workPost__picture img{
+    width: 60%;
+  }
+
+  .workDetail,
+  .workCase{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .workShare__description{
+    width: 100%;
+  }
+
+  .workDetail__item:first-child{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 468px){
+
+  .workDetail .workPost__picture,
+  .workDetail .workPost__picture img{
+    width: 100%;
+  }
+
+  .workResearch, 
+  .workSystem{
     display: flex;
     flex-direction: column;
   }
