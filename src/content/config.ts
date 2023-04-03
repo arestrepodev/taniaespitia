@@ -16,6 +16,7 @@ const work = defineCollection({
 			.optional()
 			.transform((str) => (str ? new Date(str) : undefined)),
 		heroImage: z.string().optional(),
+		heroMobileImage: z.string().optional(),
 		category: z.string(),
 		thumbImage: z.string(),
 		thumbLogo: z.string().optional(),

@@ -7,7 +7,7 @@ import "@styles/work-post.css"
 
 type Props = CollectionEntry<'work'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, heroMobileImage } = Astro.props;
 ---
 
 <html lang="es">
@@ -19,7 +19,13 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Header />
 		<main class="workPost__main">
 			<article class="workPost__hero">
-				{heroImage && <img class="image cover" src={heroImage} alt={`${title}-hero`} loading="lazy" fetchpriority="high"/>}
+				{heroImage && heroMobileImage && (
+				 	<picture class="image cover">
+						<source srcset={heroMobileImage} media="(max-width: 400px)"/>
+						<source srcset={heroImage} media="(min-width: 400px)" />
+						<img src={heroImage} alt={`${title}-hero`} loading="lazy" fetchpriority="high" class="image cover"/>
+					</picture>
+				)}
 			</article>
 			<slot />
 		</main>
