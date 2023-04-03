@@ -1,13 +1,51 @@
-.workPost__wrapper{
-
-}
-
-.workPost__main{
-}
-
 .workPost__hero{
   width: 100%;
   height: auto;
   display: block;
   overflow: hidden;
 }
+
+.workPost__section{
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+
+/* Work Post Detail */
+.workDetail{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 3rem;
+}
+
+.workDetail__image{
+  place-content: center;
+}
+
+.workDetail__subtitle{
+  opacity: .4;
+  margin-bottom: 0;
+}
+
+.workDetail__title{
+  margin-top: .5rem;
+}
+
+.workDetail__description{
+  width: 90%;
+}
+
+h1:first-of-type{
+	display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .workDetail{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
