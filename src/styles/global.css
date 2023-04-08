@@ -103,7 +103,7 @@ html {
 }
 
 .button{
-  width: 100%;
+  width: fit-content;
   height: 36px;
   display: flex;
   align-items: center;
@@ -112,11 +112,13 @@ html {
   padding: 1.2rem 1rem;
   font-weight: bold;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 .button--primary{
   background-color: var(--orange);
   color: var(--dark-blue);
+  border: 2px solid transparent;
 }
 
 .button--secondary{

@@ -129,9 +129,11 @@ h1:first-of-type{
   }
 
   .workResearch, 
-  .workSystem{
+  .workSystem,
+  .workShare__btngroup{
     display: flex;
     flex-direction: column;
   }
+
 }
 
