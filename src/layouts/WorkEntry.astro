@@ -21,8 +21,8 @@ const { title, description, pubDate, updatedDate, heroImage, heroMobileImage } =
 			<article class="workPost__hero">
 				{heroImage && heroMobileImage && (
 				 	<picture class="image cover">
-						<source srcset={heroMobileImage} media="(max-width: 400px)"/>
-						<source srcset={heroImage} media="(min-width: 400px)" />
+						<source srcset={heroMobileImage} media="(max-width: 568px)"/>
+						<source srcset={heroImage} media="(min-width: 568px)" />
 						<img src={heroImage} alt={`${title}-hero`} loading="lazy" fetchpriority="high" class="image cover"/>
 					</picture>
 				)}
