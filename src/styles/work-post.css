@@ -11,8 +11,15 @@ h1:first-of-type{
 .workPost__hero{
   width: 100%;
   height: auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
+  position: relative;
+}
+
+.workPost__hero .scroll__button{
+  bottom: 35px;
 }
 
 .workPost__section{

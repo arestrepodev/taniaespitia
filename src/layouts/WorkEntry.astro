@@ -26,6 +26,13 @@ const { title, description, pubDate, updatedDate, heroImage, heroMobileImage } =
 						<img src={heroImage} alt={`${title}-hero`} loading="lazy" fetchpriority="high" class="image cover"/>
 					</picture>
 				)}
+				<button type="button" class="scroll__button" id="js-scroll-down">
+					<picture>
+						<source srcset="/assets/images/touch-scroll.svg" media="(max-width: 768px)"/>
+						<source srcset="/assets/images/mouse-scroll.svg" media="(min-width: 768px)"/>
+						<img src="/assets/images/mouse-scroll.svg" alt="Scroll Down">
+					</picture>
+				</button>
 			</article>
 			<slot />
 		</main>
@@ -38,3 +45,13 @@ const { title, description, pubDate, updatedDate, heroImage, heroMobileImage } =
     padding: 0;
   }
 </style>
+<script>
+	const $scrollButton = document.querySelector("#js-scroll-down");
+
+  const scrollDown = () => window.scrollBy({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+  // @ts-ignore
+  $scrollButton.addEventListener("click", scrollDown);
+</script>

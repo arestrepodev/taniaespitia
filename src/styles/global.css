@@ -126,3 +126,15 @@ html {
   color: var(--dark-blue);
   border: 2px solid var(--dark-blue);
 }
+
+.scroll__button{
+  background: none;
+  border: none;
+  display: flex;
+  width: 54px;
+  height: 44px;
+  cursor: pointer;
+  animation: scroll-down 2s ease-in-out infinite;
+  position: absolute;
+}
+
