@@ -5,24 +5,28 @@
   src: url(/assets/fonts/gilroy/Gilroy-Black.ttf) format("truetype");
   font-weight: 800;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(/assets/fonts/gilroy/Gilroy-BlackItalic.ttf) format("truetype");
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(/assets/fonts/gilroy/Gilroy-Bold.ttf) format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(/assets/fonts/gilroy/Gilroy-BoldItalic.ttf) format("truetype");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
@@ -35,18 +39,21 @@
   src: url(/assets/fonts/gilroy/Gilroy-RegularItalic.ttf) format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(/assets/fonts/gilroy/Gilroy-Thin.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Gilroy';
   src: url(/assets/fonts/gilroy/Gilroy-ThinItalic.ttf) format("truetype");
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 *{

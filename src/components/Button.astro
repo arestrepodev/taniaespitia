@@ -2,4 +2,4 @@
  const { type, children, link, variation } = Astro.props;
 ---
 {type === "button" && <button class={`button button--${variation}`}>{children}</button>}
-{type === "link" && <a href={link} class={`button button--${variation}`}>{children}</a>}
+{type === "link" && <a href={link} aria-label={children} class={`button button--${variation}`}>{children}</a>}
