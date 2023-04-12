@@ -6,7 +6,7 @@
 <div class="wrapper__header">
   <header class="header">
     <a href="/" aria-label="Go to home page" class="logo">
-      <img class="logo__image" width="159px" height="48px" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
+      <img id="js-logo-image" class="logo__image" width="159px" height="48px" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
     </a>
     <!-- Desktop Menu -->
     <nav class="menu">
@@ -58,9 +58,14 @@
   const $burgerButton = document.getElementById("js-burger-menu");
   const $burgerImage = document.getElementById("js-burger-image") as HTMLImageElement;
   const $mobileMenu   = document.getElementById("js-mobile-menu");
+  const $logoImage = document.getElementById("js-logo-image") as HTMLImageElement;
   const burgerOpenFile = `/assets/images/burger-open.svg`;
   const burgerCloseFile = `/assets/images/burger-close.svg`;
-  
+  const logoFileHover = `/assets/images/logotipo-tania-espitia-hover.svg`;
+
+  $logoImage.addEventListener("mousemove", () => {
+    $logoImage.setAttribute("src", `${logoFileHover}`);
+  })
 
   const toggleMenu = () => {
     // @ts-ignore: Object is possibly 'null'
@@ -71,7 +76,6 @@
     } else {
       $burgerImage.src = `${burgerOpenFile}`;
     }
-    console.log("Toggle Menu");
   }
   
   // @ts-ignore: Object is possibly 'null'

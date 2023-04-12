@@ -57,6 +57,7 @@
   gap: 0 1rem;
   place-self: center;
   justify-self: end;
+  display: none;
 }
 
 .languages__link{
