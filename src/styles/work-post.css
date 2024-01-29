@@ -55,6 +55,7 @@ h1:first-of-type{
 
 .workDetail__title{
   margin-top: .5rem;
+  text-wrap: pretty;
 }
 
 .workDetail__info{

@@ -1,27 +1,28 @@
 ---
-  import "@styles/tabs.css";
-  import All from '@components/works/All.astro';
-  import Collaborations from '@components/works/Collaborations.astro';
-  import StudyCases from '@components/works/StudyCases.astro';
+import "@styles/tabs.css";
+import All from "@components/works/All.astro";
+import Collaborations from "@components/works/Collaborations.astro";
+import StudyCases from "@components/works/StudyCases.astro";
 ---
+
 <div class="tabs__wrapper">
   <section class="tabs" id="tabs">
     <ul class="tabs--nav" id="tabs-nav">
       <li class="tabs--item active">
-        <a class="tabs--link" href="#tab1">Todos</a>
+        <a class="tabs--link" href="#tab1">All</a>
       </li>
       <li class="tabs--item">
-        <a class="tabs--link" href="#tab2">Casos de Estudio</a>
+        <a class="tabs--link" href="#tab2">Case Studies</a>
       </li>
       <li class="tabs--item">
-        <a class="tabs--link" href="#tab3">Colaboraciones</a>
+        <a class="tabs--link" href="#tab3">Collaborations</a>
       </li>
     </ul>
     <div class="tabs--content active" id="tab1">
-      <All/>
+      <All />
     </div>
     <div class="tabs--content" id="tab2">
-      <Collaborations/>
+      <Collaborations />
     </div>
     <div class="tabs--content" id="tab3">
       <StudyCases />
@@ -36,16 +37,17 @@
     e.preventDefault();
     const target = e.target as HTMLLinkElement;
     const tagName = target.tagName;
-    if(tagName){
+    if (tagName) {
       const tabID = target.getAttribute("href");
       const tab = document.querySelector(tabID);
-      if(tab){
-        $tabsContent.forEach(content => content.classList.remove("active"));
-        $tabsNav.querySelectorAll("li").forEach(li => li.classList.remove("active"));
+      if (tab) {
+        $tabsContent.forEach((content) => content.classList.remove("active"));
+        $tabsNav
+          .querySelectorAll("li")
+          .forEach((li) => li.classList.remove("active"));
         tab.classList.add("active");
         target.parentElement.classList.add("active");
       }
     }
-  }) 
-  
+  });
 </script>
