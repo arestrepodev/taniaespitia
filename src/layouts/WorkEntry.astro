@@ -1,57 +1,72 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import BaseHead from '@components/BaseHead.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import "@styles/work-post.css"
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import "@styles/work-post.css";
 
-type Props = CollectionEntry<'work'>['data'];
+type Props = CollectionEntry<"work">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage, heroMobileImage } = Astro.props;
+const { title, description, heroImage, heroMobileImage } = Astro.props;
 ---
 
-<html lang="es">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
 
-	<body>
-		<Header />
-		<main class="workPost__main">
-			<article class="workPost__hero">
-				{heroImage && heroMobileImage && (
-				 	<picture class="image cover">
-						<source srcset={heroMobileImage} media="(max-width: 568px)"/>
-						<source srcset={heroImage} media="(min-width: 568px)" />
-						<img src={heroImage} alt={`${title}-hero`} loading="lazy" fetchpriority="high" class="image cover"/>
-					</picture>
-				)}
-				<button type="button" class="scroll__button" id="js-scroll-down">
-					<picture>
-						<source srcset="/assets/images/touch-scroll.svg" media="(max-width: 768px)"/>
-						<source srcset="/assets/images/mouse-scroll.svg" media="(min-width: 768px)"/>
-						<img src="/assets/images/mouse-scroll.svg" alt="Scroll Down">
-					</picture>
-				</button>
-			</article>
-			<slot />
-		</main>
-		<Footer />
-	</body>
+  <body>
+    <Header />
+    <main class="workPost__main">
+      <article class="workPost__hero">
+        {
+          heroImage && heroMobileImage && (
+            <picture class="image cover">
+              <source srcset={heroMobileImage} media="(max-width: 568px)" />
+              <source srcset={heroImage} media="(min-width: 568px)" />
+              <img
+                src={heroImage}
+                alt={`${title}-hero`}
+                loading="lazy"
+                fetchpriority="high"
+                class="image cover"
+              />
+            </picture>
+          )
+        }
+        <button type="button" class="scroll__button" id="js-scroll-down">
+          <picture>
+            <source
+              srcset="/assets/images/touch-scroll.svg"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="/assets/images/mouse-scroll.svg"
+              media="(min-width: 768px)"
+            />
+            <img src="/assets/images/mouse-scroll.svg" alt="Scroll Down" />
+          </picture>
+        </button>
+      </article>
+      <slot />
+    </main>
+    <Footer />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      const $scrollButton = document.querySelector("#js-scroll-down");
+
+      const scrollDown = () =>
+        window.scrollBy({
+          top: window.innerHeight,
+          behavior: "smooth",
+        });
+      // @ts-ignore
+      $scrollButton.addEventListener("click", scrollDown);
+    </script>
+  </body>
 </html>
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-  }
-</style>
-<script>
-	const $scrollButton = document.querySelector("#js-scroll-down");
-
-  const scrollDown = () => window.scrollBy({
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
-  // @ts-ignore
-  $scrollButton.addEventListener("click", scrollDown);
-</script>

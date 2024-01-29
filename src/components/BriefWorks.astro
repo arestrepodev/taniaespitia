@@ -1,32 +1,46 @@
 ---
-  import "@styles/brief-works.css";
-  import { getCollection } from 'astro:content';
+import "@styles/brief-works.css";
+import { getCollection } from "astro:content";
 
-  const CollaborationsWork = await getCollection("work", ({data}) => {
-    return data.category === "COLLABORATIONS"
-  });
+const CollaborationsWork = await getCollection("work", ({ data }) => {
+  return data.category === "COLLABORATIONS";
+});
 
-  const StudyCasesWork = await getCollection("work", ({ data }) => {
-    return data.category === "STUDY-CASES"
-  });
+const StudyCasesWork = await getCollection("work", ({ data }) => {
+  return data.category === "STUDY-CASES";
+});
 ---
+
 <div class="feature__wrapper">
   <section class="feature">
     <article class="feature__item feature--description">
-      <h3 class="feature__subtitle">Trabajos</h3>
-      <h2 class="feature__title">Mejores proyectos y colaboraciones</h2>
-      <p class="feature__description">A lo largo de los años he tenido la oportunidad de trabajar con marcas reconocidas a nivel nacional e internacional. Adicional, el aprendizaje constante ha sido una oportunidad para brindar soluciones a problemáticas por medio de propuestas creativas presentadas como casos de estudio.</p>
+      <h3 class="feature__subtitle">Work</h3>
+      <h2 class="feature__title">Top Projects and Collaborations</h2>
+      <p class="feature__description">
+        Throughout the years, I have had the opportunity to work with nationally
+        and internationally recognized brands. Additionally, continuous learning
+        has provided the chance to offer solutions to challenges through
+        creative proposals presented as case studies
+      </p>
     </article>
     <article class="feature__item feature--works card__container">
       <div class="card">
-        <h3 class="card__title">Colaboraciones</h3>
-        <p class="card__description">He trabajado con marcas como:</p>
+        <h3 class="card__title">Collaborations</h3>
+        <p class="card__description">I have worked with brands such as:</p>
         <ul class="card__list">
           {
             CollaborationsWork.map((work) => (
               <li class="card__item">
-                <a href={`/work/${work.slug}`} aria-label="Collaborations" class="card__link">
-                  <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow"/>
+                <a
+                  href={`/work/${work.slug}`}
+                  aria-label="Collaborations"
+                  class="card__link"
+                >
+                  <img
+                    src="/assets/images/card-arrow.svg"
+                    class="card__image"
+                    alt="Card Arrow"
+                  />
                   <span class="card__link__text">{work.data.titleLink}</span>
                 </a>
               </li>
@@ -34,19 +48,34 @@
           }
         </ul>
         <a href="/work#tabs" aria-label="work tab" class="card__showmore">
-          <span>Ver Más</span>
-          <img src="/assets/images/arrow-right.svg" alt="Arrow right" class="card__arrow">
+          <span>View more</span>
+          <img
+            src="/assets/images/arrow-right.svg"
+            alt="Arrow right"
+            class="card__arrow"
+          />
         </a>
       </div>
       <div class="card">
-        <h3 class="card__title">Casos de Estudio</h3>
-        <p class="card__description">Por medio de propuestas creativas he brindado soluciones a problemáticas del entorno:</p>
+        <h3 class="card__title">Case Studies</h3>
+        <p class="card__description">
+          Through creative proposals, I have provided solutions to environmental
+          challenges
+        </p>
         <ul class="card__list">
           {
             StudyCasesWork.map((work) => (
               <li class="card__item">
-                <a href={`/work/${work.slug}`} aria-label="Study Cases" class="card__link">
-                  <img src="/assets/images/card-arrow.svg" class="card__image" alt="Card Arrow"/>
+                <a
+                  href={`/work/${work.slug}`}
+                  aria-label="Study Cases"
+                  class="card__link"
+                >
+                  <img
+                    src="/assets/images/card-arrow.svg"
+                    class="card__image"
+                    alt="Card Arrow"
+                  />
                   <span class="card__link__text">{work.data.titleLink}</span>
                 </a>
               </li>
@@ -54,8 +83,12 @@
           }
         </ul>
         <a href="/work#tabs" aria-label="Work tab" class="card__showmore">
-          <span>Ver Más</span>
-          <img src="/assets/images/arrow-right.svg" alt="Arrow right" class="card__arrow">
+          <span>View more</span>
+          <img
+            src="/assets/images/arrow-right.svg"
+            alt="Arrow right"
+            class="card__arrow"
+          />
         </a>
       </div>
     </article>

@@ -1,19 +1,44 @@
 ---
-  import "@styles/brief.css";
-  import Button from '@components/Button.astro';
+import "@styles/brief.css";
+import Button from "@components/Button.astro";
 ---
+
 <div class="brief__wrapper">
   <section class="brief">
     <article class="brief__item">
-      <h2 class="brief__title">Mi carrera hasta ahora</h2>
-      <p class="brief__description">En lo recorrido estos 5 años he tenido la oportunidad de trabajar en empresas como Prodigious y 150 Por ciento, desempeñando cargos como Front-End y UX/UI Designer. Creando páginas web y apps para proyectos relacionados con cervecería, estilo de vida, retos y experiencias. Partiendo de ideas innovadoras que implemento con creatividad y profesionalismo.</p>
-      <Button children="Ver Más" variation="primary" type="link" link="/about"/>
+      <h2 class="brief__title">About me</h2>
+      <p class="brief__description">
+        Over the past 5 years, I have had the opportunity to work in companies
+        such as Open LMS, Prodigious, and 150 por ciento, holding positions as a
+        Front-End and UX/UI Designer. I have been involved in the creation of
+        websites and apps for projects related to breweries, lifestyle,
+        challenges, and experiences. Starting from innovative ideas, I implement
+        them with creativity and professionalism
+      </p>
+      <Button
+        children="View more"
+        variation="primary"
+        type="link"
+        link="/about"
+      />
     </article>
     <article class="brief__item">
       <picture class="brief__picture">
-        <source class="brief__picture" srcset="/assets/images/badges-about-mobile.svg" media="(max-width: 768px)"/>
-        <source  class="brief__picture" srcset="/assets/images/badges-about-desktop.svg" media="(min-width: 768px)"/>
-        <img class="brief__picture" src="/assets/images/badges-about-desktop.svg" alt="Tech Skills">
+        <source
+          class="brief__picture"
+          srcset="/assets/images/badges-about-mobile.svg"
+          media="(max-width: 768px)"
+        />
+        <source
+          class="brief__picture"
+          srcset="/assets/images/badges-about-desktop.svg"
+          media="(min-width: 768px)"
+        />
+        <img
+          class="brief__picture"
+          src="/assets/images/badges-about-desktop.svg"
+          alt="Tech Skills"
+        />
       </picture>
     </article>
   </section>

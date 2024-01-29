@@ -110,12 +110,12 @@
 }
 
 .card__showmore {
-  width: 128px;
+  width: 150px;
   height: 36px;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 5px;
+  gap: 0 8px;
   color: var(--blue-sky);
   text-decoration: none;
   font-size: 1.25rem;

@@ -1,33 +1,62 @@
 ---
-  import "@styles/header.css";
-  const pathname = new URL(Astro.request.url).pathname;
-  const currentPath = pathname.slice(1);
+import "@styles/header.css";
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1);
 ---
+
 <div class="wrapper__header">
   <header class="header">
     <a href="/" aria-label="Go to home page" class="logo">
-      <img id="js-logo-image" class="logo__image" width="159px" height="48px" src="/assets/images/logotipo-tania-espitia.svg" alt="Tania Espitia Logotipo">
+      <img
+        id="js-logo-image"
+        class="logo__image"
+        width="159px"
+        height="48px"
+        src="/assets/images/logotipo-tania-espitia.svg"
+        alt="Tania Espitia Logotipo"
+      />
     </a>
     <!-- Desktop Menu -->
     <nav class="menu">
       <ul class="menu__list">
         <li class="menu__item">
-          <a class={`menu__link ${currentPath === "work" ? "active" : null}`} aria-label="Go to work page" href="/work">Trabajos</a>
+          <a
+            class={`menu__link ${currentPath === "work" ? "active" : null}`}
+            aria-label="Go to work page"
+            href="/work">Work</a
+          >
         </li>
         <li class="menu__item">
-          <a class={`menu__link ${currentPath === "about" ? "active" : null}`} aria-label="Go to about page" href="/about">Sobre mi</a>
+          <a
+            class={`menu__link ${currentPath === "about" ? "active" : null}`}
+            aria-label="Go to about page"
+            href="/about">About</a
+          >
         </li>
         <li class="menu__item">
-          <a class={`menu__link ${currentPath === "contact" ? "active" : null}`} aria-label="Go to contact page" href="#contact">Contacto</a>
+          <a
+            class={`menu__link ${currentPath === "contact" ? "active" : null}`}
+            aria-label="Go to contact page"
+            href="#contact">Contact</a
+          >
         </li>
       </ul>
     </nav>
     <div class="languages">
-      <a class="languages__link" href="#" aria-label="Change spanish language">ES</a>
-      <a class="languages__link" href="#" aria-label="Change english language">EN</a>
+      <a class="languages__link" href="#" aria-label="Change spanish language"
+        >ES</a
+      >
+      <a class="languages__link" href="#" aria-label="Change english language"
+        >EN</a
+      >
     </div>
     <button type="button" class="burger" id="js-burger-menu">
-      <img class="burger__avatar" src="/assets/images/burger-open.svg" alt="Burger Icon" id="js-burger-image">
+      <img
+        class="burger__avatar"
+        src="/assets/images/burger-open.svg"
+        alt="Burger Icon"
+        id="js-burger-image"
+      />
       <span class="burger__icon"></span>
     </button>
   </header>
@@ -35,13 +64,27 @@
 <nav class="mobileMenu" id="js-mobile-menu">
   <ul class="mobileMenu__list">
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "work" ? "active" : null}`} aria-label="Go to work page" href="/work">Trabajos</a>
+      <a
+        class={`mobileMenu__link ${currentPath === "work" ? "active" : null}`}
+        aria-label="Go to work page"
+        href="/work">Trabajos</a
+      >
     </li>
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "about" ? "active" : null}`} aria-label="Go to about page" href="/about">Sobre mi</a>
+      <a
+        class={`mobileMenu__link ${currentPath === "about" ? "active" : null}`}
+        aria-label="Go to about page"
+        href="/about">Sobre mi</a
+      >
     </li>
     <li class="mobileMenu__item">
-      <a class={`mobileMenu__link ${currentPath === "contact" ? "active" : null}`} aria-label="Go to contact page" href="#contact">Contacto</a>
+      <a
+        class={`mobileMenu__link ${
+          currentPath === "contact" ? "active" : null
+        }`}
+        aria-label="Go to contact page"
+        href="#contact">Contacto</a
+      >
     </li>
   </ul>
   <div class="mobileLanguages">
@@ -49,36 +92,43 @@
     <a class="mobileLanguages__link" href="#">EN</a>
   </div>
   <div class="social">
-    <a href="#" class="social__link" aria-label="Change spanish language">Behance</a>
-    <a href="#" class="social__link" aria-label="Change english language">Linkedin</a>
+    <a href="#" class="social__link" aria-label="Change spanish language"
+      >Behance</a
+    >
+    <a href="#" class="social__link" aria-label="Change english language"
+      >Linkedin</a
+    >
   </div>
 </nav>
 <script>
   let toggle = false;
   const $burgerButton = document.getElementById("js-burger-menu");
-  const $burgerImage = document.getElementById("js-burger-image") as HTMLImageElement;
-  const $mobileMenu   = document.getElementById("js-mobile-menu");
-  const $logoImage = document.getElementById("js-logo-image") as HTMLImageElement;
+  const $burgerImage = document.getElementById(
+    "js-burger-image"
+  ) as HTMLImageElement;
+  const $mobileMenu = document.getElementById("js-mobile-menu");
+  const $logoImage = document.getElementById(
+    "js-logo-image"
+  ) as HTMLImageElement;
   const burgerOpenFile = `/assets/images/burger-open.svg`;
   const burgerCloseFile = `/assets/images/burger-close.svg`;
   const logoFileHover = `/assets/images/logotipo-tania-espitia-hover.svg`;
 
   $logoImage.addEventListener("mousemove", () => {
     $logoImage.setAttribute("src", `${logoFileHover}`);
-  })
+  });
 
   const toggleMenu = () => {
     // @ts-ignore: Object is possibly 'null'
     $mobileMenu.classList.toggle("open");
-    toggle = !toggle; 
-    if(toggle){
+    toggle = !toggle;
+    if (toggle) {
       $burgerImage.src = `${burgerCloseFile}`;
     } else {
       $burgerImage.src = `${burgerOpenFile}`;
     }
-  }
-  
+  };
+
   // @ts-ignore: Object is possibly 'null'
   $burgerButton.addEventListener("click", toggleMenu);
-  
 </script>

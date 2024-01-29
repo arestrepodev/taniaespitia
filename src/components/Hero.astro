@@ -1,21 +1,33 @@
 ---
-import "@styles/hero-landing.css"
-import Button from '@components/Button.astro';
+import "@styles/hero-landing.css";
+import Button from "@components/Button.astro";
 ---
+
 <section class="wrapper__hero">
   <article class="hero">
     <div class="hero__content">
       <h1 class="hero__title large-black-title">
-        ¡Hola! Soy Tania Espitia, <br/> Diseñadora UX/UI
+        ¡Hi! I’m Tania Espitia <br /> UX/UI Designer
       </h1>
-      <Button children="Ver Más" variation="primary" type="link" link="/about"/>
+      <Button
+        children="View more"
+        variation="primary"
+        type="link"
+        link="/about"
+      />
     </div>
     <div class="hero__footer">
       <button type="button" class="hero__button" id="js-scroll-down">
         <picture>
-          <source srcset="/assets/images/touch-scroll.svg" media="(max-width: 768px)"/>
-          <source srcset="/assets/images/mouse-scroll.svg" media="(min-width: 768px)"/>
-          <img src="/assets/images/mouse-scroll.svg" alt="Scroll Down">
+          <source
+            srcset="/assets/images/touch-scroll.svg"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="/assets/images/mouse-scroll.svg"
+            media="(min-width: 768px)"
+          />
+          <img src="/assets/images/mouse-scroll.svg" alt="Scroll Down" />
         </picture>
       </button>
     </div>
@@ -24,10 +36,11 @@ import Button from '@components/Button.astro';
 <script>
   const $scrollButton = document.querySelector("#js-scroll-down");
 
-  const scrollDown = () => window.scrollBy({
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
+  const scrollDown = () =>
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
   // @ts-ignore
   $scrollButton.addEventListener("click", scrollDown);
 </script>
