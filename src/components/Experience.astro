@@ -1,55 +1,79 @@
 ---
 import "@styles/experience.css";
-import { experienceData } from '@lib/experience';
-
+import { experienceData } from "@lib/experience";
 ---
+
 <div class="experience__wrapper">
   <section class="experience">
-    <h2 class="experience__title">Experiencia</h2>
-    {experienceData.map(experience => (
-      <article class="experience__item">
-        <h3 class="experience__subtitle">{experience.date}</h3>
-        <div class="experience__details">
-          <details class="details" open={experience.open}>
-            <summary class="summary">
-              <h3 class="summary__title">{experience.title}</h3>
-              <small class="summary__subtitle">{experience.subtitle}</small>
-              <svg class="chevron-up" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.6665 15.5L19.9998 28.8333L33.3332 15.5" stroke="#011627" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            </summary>
-            <div class="summary__content">
-              <div class="summary__detail">
-                <h4 class="summary__detail__title">Responsabilidades</h4>
-                <ul class="summary__list responsibilities--list">
-                  {
-                    experience?.responsibilities.map(responsibility => (
+    <h2 class="experience__title">Professional Experience</h2>
+    {
+      experienceData.map((experience) => (
+        <article class="experience__item">
+          <h3 class="experience__subtitle">{experience.date}</h3>
+          <div class="experience__details">
+            <details class="details" open={experience.open}>
+              <summary class="summary">
+                <h3 class="summary__title">{experience.title}</h3>
+                <small class="summary__subtitle">{experience.subtitle}</small>
+                <svg
+                  class="chevron-up"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.6665 15.5L19.9998 28.8333L33.3332 15.5"
+                    stroke="#011627"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </summary>
+              <div class="summary__content">
+                <div class="summary__detail">
+                  <h4 class="summary__detail__title">Responsibilities</h4>
+                  <ul class="summary__list responsibilities--list">
+                    {experience?.responsibilities.map((responsibility) => (
                       <li class="summary__list__item paragraph">
                         {responsibility.item}
                       </li>
-                    ))
-                  }
-                </ul>
-              </div>
-              <div class="summary__detail">
-                <h4 class="summary__detail__title">Principales logros</h4>
-                <ul class="summary__list achievements--list">
-                  {
-                    experience?.achievements.map(achievement => (
+                    ))}
+                  </ul>
+                </div>
+                <div class="summary__detail">
+                  <h4 class="summary__detail__title">Main achievements</h4>
+                  <ul class="summary__list achievements--list">
+                    {experience?.achievements.map((achievement) => (
                       <li class="summary__list__item paragraph">
                         {achievement.item}
                       </li>
-                    ))
-                  }
-                </ul>
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <svg class="chevron-down" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M33.3332 25.5L19.9998 12.1666L6.6665 25.5" stroke="#011627" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </details>
-        </div>
-      </article>
-    ))}
+              <svg
+                class="chevron-down"
+                width="40"
+                height="41"
+                viewBox="0 0 40 41"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M33.3332 25.5L19.9998 12.1666L6.6665 25.5"
+                  stroke="#011627"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </details>
+          </div>
+        </article>
+      ))
+    }
   </section>
 </div>

@@ -2,68 +2,68 @@ import { Experience } from '@root/models'
 
 export const experienceData: Experience[] = [
   {
-    date: "Abril 2021 - Diciembre 2022",
+    date: "April 2021 - December 2022",
     title: "UX/UI Designer",
     subtitle: "150 POR CIENTO, Bogotá",
     open: true,
     responsibilities: [
       {
-        item: "Definición y aplicación del estilo gráfico que se implementó en proyectos como el site de BBC Cervecería, aplicación Runnder, landing page Corona, páginas internas de Primax, entre otros. Teniendo como base el branding de cada marca."
+        item: "Collaborated with major brands such as BBC Cervecería, Michelob, and Corona to create modern and innovative products aligned with their visual identities."
       },
       {
-        item: "Creación de mockups responsive empleando la herramienta Figma con el fin de dar respuesta a una solicitud del cliente, ya sea re-diseño o planteamiento de la idea desde cero."
+        item: "Designed adaptable interfaces for iOS and Android platforms, ensuring seamless user experiences."
       },
       {
-        item: "Implementación de prototipos por medio de Figma con el fin de dar una experiencia cercana al producto final."
+        item: "Created interactive and responsive prototypes using Figma to enhance user engagement and provide a realistic product experience."
       }
     ],
     achievements: [
       {
-        item: "Creé e implementé el Sistema de Diseño interno de la empresa con su respectiva documentación para facilitar la comprensión del mismo. Logré reducir los tiempos de entrega por medio de la estandarización de componentes."
+        item: "Created and implemented the company's internal Design System."
       },
       {
-        item: "Implementé el uso de portadas de proyectos empleando Figma, de esta manera se mejoró la organización de los mismos facilitando su búsqueda y fácil identificación del estado actual teniendo en cuenta el flujo interno del proyecto. Realice su respectiva documentación."
+        item: "I worked together with the development team to ensure the functionality and coherence of the implemented design solutions."
       }
     ]
   },
   {
-    date: "Abril 2017 - Enero 2021",
+    date: "April 2017 - January 2021",
     title: "Associate Front-End Engineer",
     subtitle: "Prodigious, Bogotá",
     open: false,
     responsibilities: [
       {
-        item: "Creación de correos empleando HTML 4 y CSS. Las pruebas en diferentes clientes de correos se llevan a cabo por medio de Litmus, Email on acid, Putsmail y campaign monitor. Con el fin de conocer y emplear un flujo de trabajo se emplea la herramienta JIRA"
+        item: "Creation of emails using HTML 4 and CSS. Tests on different email clients are carried out using Litmus, Email on acid, Putsmail, and campaign monitor. JIRA tool is used to learn and employ a workflow"
       },
       {
-        item: "Desarrollo de banners animados con el uso de HTML5, CSS, JavaScript y la librería GreenSock. Uso de la herramienta Photoshop para obtener imágenes y textos."
+        item: "Development of animated banners using HTML5, CSS, JavaScript, and the GreenSock library. Photoshop is used to obtain images and texts."
       },
       {
-        item: "Participación en el equipo de Front-end que llevó a cabo la página web del evento Digital Up Level Summit. Realizando reuniones con la metodología Scrum y aplicando herramientas como HTML5, CSS3, React, Jira y Git."
+        item: "Participation in the front-end team that carried out the website for the Digital Up Level Summit event. Meetings were held using the Scrum methodology and applying tools such as HTML5, CSS3, React, Jira, and Git."
       }
     ],
     achievements: [
       {
-        item: "Dentro de la participación en el site para el evento Digital Up Level Summit, realice la animación de las cards que contienen información relacionada con los Speakers, con esto mejoré la interacción con el componente, dicha animación se sigue implementando."
+        item: "Within the participation in the site for the Digital Up Level Summit event, I animated the cards containing information related to the Speakers, improving interaction with the component."
       }
     ]
   },
   {
-    date: "Octubre 2016 - Febrero 2017",
+    date: "October 2016 - February 2017",
     title: "Practicante SENA",
     subtitle: "Prodigious, Bogotá",
     open: false,
     responsibilities: [
       {
-        item: "Diseño de Wireframes. Con un equipo de trabajo desarrollamos el home de una tienda online responsive, por medio de HTML5, CSS3, SASS, Git y Metodología Scrum.",
+        item: "Wireframe design. With a work team, we developed the home of a responsive online store using HTML5, CSS3, SASS, Git, and the Scrum methodology.",
       },
       {
-        item: "Participación en el proyecto Snow Box, desarrollando el User Flow por medio de Adobe XD y la creación de personajes empleando Photoshop."
+        item: "Participation in the Snow Box project, developing the User Flow using Adobe XD and creating characters using Photoshop."
       }
     ],
     achievements: [
       {
-        item: "Recibí un reconocimiento Kudos junto al equipo de trabajo por el proyecto Snow Box."
+        item: "Received Kudos recognition for outstanding contribution to the Snow Box project."
       }
     ]
   }

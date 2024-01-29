@@ -1,5 +1,5 @@
 ---
-import "@styles/education.css"
+import "@styles/education.css";
 
 interface Education {
   name: string;
@@ -9,44 +9,46 @@ interface Education {
 
 const educationData: Education[] = [
   {
-    "name": "Marketing y Publicidad",
-    "location": "UNIR, Bogotá",
-    "date": "Agosto 2022 - Actualmente"
+    name: "Marketing and Advertising",
+    location: "UNIR, Bogotá",
+    date: "August 2022 - Currently",
   },
   {
-    "name": "Publicidad",
-    "location": "Universidad Central, Bogotá",
-    "date": "Agosto 2022 - Actualmente"
+    name: "Advertising",
+    location: "Universidad Central, Bogotá",
+    date: "August 2019 - November 2022 (Up to 5th semester)",
   },
   {
-    "name": "Tecnólogo en Producción de multimedia",
-    "location": "SENA, Bogotá",
-    "date": "Abril 2015 - Abril 2017"
+    name: "Tecnólogo Producción de multimedia",
+    location: "SENA, Bogotá",
+    date: "April 2015 - April 2017",
   },
   {
-    "name": "Diseño UX/UI",
-    "location": "Coderhouse, Bogotá",
-    "date": "Diciembre 2020"
+    name: "UX/UI Design",
+    location: "Coderhouse, Bogotá",
+    date: "June 2020",
   },
   {
-    "name": "Microdegree para UX/UI Designer",
-    "location": "Crehana, Bogotá",
-    "date": "Junio 2020"
+    name: "UX/UI Designer Microdegree",
+    location: "Crehana, Bogotá",
+    date: "June 2020",
   },
-]
-
+];
 ---
+
 <div class="education__wrapper">
   <section class="education">
-    <h2 class="education__title">Educación</h2>
+    <h2 class="education__title">Education</h2>
     <div class="education__grid">
-      {educationData.map(({name, location, date}: Education) => (
-        <article class="education__item">
-          <h3 class="education__item__title">{name}</h3>
-          <h4 class="education__subtitle">{location}</h4>
-          <small class="education__date">{date}</small>
-        </article>
-      ))}
+      {
+        educationData.map(({ name, location, date }: Education) => (
+          <article class="education__item">
+            <h3 class="education__item__title">{name}</h3>
+            <h4 class="education__subtitle">{location}</h4>
+            <small class="education__date">{date}</small>
+          </article>
+        ))
+      }
     </div>
   </section>
 </div>

@@ -1,22 +1,29 @@
 ---
-import "@styles/about-hero.css"
+import "@styles/about-hero.css";
 ---
+
 <section class="aboutHero__wrapper">
   <article class="aboutHero">
     <div class="aboutHero__content">
       <h2 class="aboutHero__title">
-        <span class="aboutHero__title--white large-black-title">¡Ho</span><span class="aboutHero__title--orange large-black-title">la!</span>
+        <span class="aboutHero__title--white large-black-title">H</span><span
+          class="aboutHero__title--orange large-black-title">i!</span
+        >
       </h2>
-      <h3 class="aboutHero__subtitle large-light-title">
-        Soy Tania Espitia
-      </h3>
+      <h3 class="aboutHero__subtitle large-light-title">I’m Tania Espitia</h3>
     </div>
-     <div class="aboutHero__footer">
+    <div class="aboutHero__footer">
       <button type="button" class="aboutHero__button" id="js-scroll-down">
         <picture>
-          <source srcset="/assets/images/touch-scroll.svg" media="(max-width: 768px)"/>
-          <source srcset="/assets/images/mouse-scroll.svg" media="(min-width: 768px)"/>
-          <img src="/assets/images/mouse-scroll.svg" alt="Scroll Down">
+          <source
+            srcset="/assets/images/touch-scroll.svg"
+            media="(max-width: 768px)"
+          />
+          <source
+            srcset="/assets/images/mouse-scroll.svg"
+            media="(min-width: 768px)"
+          />
+          <img src="/assets/images/mouse-scroll.svg" alt="Scroll Down" />
         </picture>
       </button>
     </div>
@@ -25,10 +32,11 @@ import "@styles/about-hero.css"
 <script>
   const $scrollButton = document.querySelector("#js-scroll-down");
 
-  const scrollDown = () => window.scrollBy({
-    top: window.innerHeight,
-    behavior: "smooth"
-  });
+  const scrollDown = () =>
+    window.scrollBy({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
 
   $scrollButton.addEventListener("click", scrollDown);
 </script>
