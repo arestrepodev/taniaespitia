@@ -101,6 +101,9 @@ h6{
   font-size: .8rem;
 }
 
+p{
+  text-wrap: pretty;
+}
 p,
 .paragraph{
   font-size: 1.125rem;
